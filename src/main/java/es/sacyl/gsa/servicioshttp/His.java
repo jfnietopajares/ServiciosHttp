@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import es.sacyl.gsa.servicioshttp.services.ServicesJimena;
 import es.sacyl.gsa.servicioshttp.services.ServicesPdf;
 import es.sacyl.gsa.servicioshttp.services.ServicesUrg;
+import es.sacyl.gsa.servicioshttp.services.ServicesWord;
 import es.sacyl.gsa.servicioshttp.utils.Constantes;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -82,8 +83,10 @@ public class His extends HttpServlet {
                 case Constantes.LLAMADA_PETICION_RX:
                     String motivo = request.getParameter("motivo");
                     String peticion = request.getParameter("peticion");
-
                     respuesta = new ServicesPdf().getUrlPeticionRX(numerohc, dni, motivo, peticion, PDFPATHABSOLUTO, PDFPATHRELATIVOS, urlBase);
+                    break;
+                case Constantes.LLAMADA_INFORME:
+                    respuesta = new ServicesWord().getUrlInform(numerohc, dni, PDFPATHABSOLUTO, PDFPATHRELATIVOS, urlBase);
                     break;
             }
         } else {

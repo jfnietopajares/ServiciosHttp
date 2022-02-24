@@ -19,10 +19,10 @@ import org.apache.logging.log4j.Logger;
  *
  * @author 06551256M
  */
-public class PeticionRx extends MasterReport implements Serializable {
+public class PeticionRxPdf extends MasterReport implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    private static final Logger logger = LogManager.getLogger(PeticionRx.class);
+    private static final Logger logger = LogManager.getLogger(PeticionRxPdf.class);
 
     private PacienteHis paciente = null;
     private Usuario usuario = null;
@@ -30,7 +30,7 @@ public class PeticionRx extends MasterReport implements Serializable {
     private String motivo = null;
     private String prueba = null;
 
-    public PeticionRx(PacienteHis paciente, Usuario usuario, String numicu, String motivo, String prueba, String pathAbs, String pathrel, String urlBase) {
+    public PeticionRxPdf(PacienteHis paciente, Usuario usuario, String numicu, String motivo, String prueba, String pathAbs, String pathrel, String urlBase) {
         super();
         this.pathAbs = pathAbs;
         this.pathrel = pathrel;

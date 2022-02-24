@@ -428,6 +428,10 @@ public class Utilidades {
         return LocalDate.now().format(DateTimeFormatter.ofPattern("yyyyMMdd"));
     }
 
+    public static String getFechaHoraActualFormato() {
+        return LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/mm/yyyy  HH:mm"));
+    }
+
     public static Integer getHoraActualInt() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HHmm");
         String hora = LocalDateTime.now().format(formatter);

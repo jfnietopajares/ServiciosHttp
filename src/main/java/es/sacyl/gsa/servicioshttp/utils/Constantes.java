@@ -8,7 +8,8 @@ public class Constantes {
 
     public static final String LLAMADA_ENURGENICAS = "ENURGENCIAS";
     public static final String LLAMADA_INFORMES_PACIENTE = "INFORMES_PACIENTE";
-    public static final String LLAMADA_PETICION_RX = "LLAMADA_PETICION_RX";
+    public static final String LLAMADA_PETICION_RX = "PETICION_RX";
+    public static final String LLAMADA_INFORME = "INFORME";
 
     public static final String PDFDIRECTORIO = "pdf";
 
